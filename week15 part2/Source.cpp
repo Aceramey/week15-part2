@@ -11,11 +11,7 @@ T half(T number)
 {
 	if (typeid(number) == typeid(std::int32_t))
 	{
-		float temp;
-		temp = static_cast<double>(number);
-		temp = temp / 2.0;
-		temp = round(temp);
-		return static_cast<int>(temp);
+		return int(round(static_cast<float>(number) / 2.0));
 	}
 	else
 	{
